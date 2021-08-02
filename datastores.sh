@@ -20,15 +20,18 @@ brew update
 
 # Install data stores
 brew install mysql
+brew services start mysql
 brew install postgresql
-brew install mongo
+brew tap mongodb/brew
+brew install mongodb-community@5.0
 brew install redis
+brew services start redis
 brew install elasticsearch
 
 # Install mysql workbench
-# Install Cask
-brew install caskroom/cask/brew-cask
-brew cask install --appdir="/Applications" mysqlworkbench
+brew install wget
+wget https://gist.githubusercontent.com/jonjack/84e24ed5f44e452e629cfe01cf472267/raw/987362b8bd554b49ecc136213321d5f27c89efb0/mysqlworkbench-8.0.25.rb
+brew install --cask mysqlworkbench-8.0.25.rb
 
 # Remove outdated versions from the cellar.
 brew cleanup
