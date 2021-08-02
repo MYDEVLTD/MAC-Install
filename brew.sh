@@ -71,6 +71,7 @@ brew install composer
 composer global require laravel/valet
 valet install
 valet use php@7.3
+pecl install xdebug
 
 # Install font tools.
 brew tap bramstein/webfonttools
