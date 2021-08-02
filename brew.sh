@@ -66,7 +66,11 @@ brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
+brew install php@7.3 --with-gmp
+brew install composer
+composer global require laravel/valet
+valet install
+valet use php@7.3
 
 # Install font tools.
 brew tap bramstein/webfonttools
