@@ -20,7 +20,17 @@ brew update
 
 # Install data stores
 brew install mysql
-brew services start mysql
+
+mysql.server start 
+
+
+mysql -uroot << 'EOF'
+SET PASSWORD FOR root@localhost = "secret";FLUSH PRIVILEGES;
+DELETE FROM mysql.user WHERE user='root' AND host NOT IN ('localhost', '127.0.0.1', '::1');
+DELETE FROM mysql.user WHERE user='';
+FLUSH PRIVILEGES;
+EOF
+
 brew install postgresql
 brew tap mongodb/brew
 brew install mongodb-community@5.0
@@ -32,6 +42,10 @@ brew install elasticsearch
 brew install wget
 wget https://gist.githubusercontent.com/jonjack/84e24ed5f44e452e629cfe01cf472267/raw/987362b8bd554b49ecc136213321d5f27c89efb0/mysqlworkbench-8.0.25.rb
 brew install --cask mysqlworkbench-8.0.25.rb
+
+brew install --cask dbeaver-community
+brew install --cask nosqlbooster-for-mongodb
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
