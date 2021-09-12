@@ -68,6 +68,7 @@ brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 brew install php@7.3 --with-gmp
 brew install composer
+echo export PATH=$PATH:/Users/itshak/.composer/vendor/bin >> .bashrc 
 composer global require laravel/valet
 valet install
 valet use php@7.3
