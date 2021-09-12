@@ -142,28 +142,28 @@ brew install heroku/brew/heroku
 heroku update
 
 # Core casks
-brew install --cask --appdir=/Applications alfred
-brew install --cask --appdir=/Applications iterm2
-brew install --cask --appdir=/Applications java
-brew install --cask --appdir=/Applications xquartz
+brew install --cask --appdir="/Applications" alfred
+brew install --cask --appdir="/Applications" iterm2
+brew install --cask --appdir="/Applications" java
+brew install --cask --appdir="/Applications" xquartz
 
 # Development tool casks
-brew install --cask --appdir=/Applications sublime-text
-brew install --cask --appdir=/Applications atom
-brew install --cask --appdir=/Applications virtualbox
-brew install --cask --appdir=/Applications vagrant
-brew install --cask --appdir=/Applications macdown
+brew install --cask --appdir="/Applications" sublime-text
+brew install --cask --appdir="/Applications" atom
+brew install --cask --appdir="/Applications" virtualbox
+brew install --cask --appdir="/Applications" vagrant
+brew install --cask --appdir="/Applications" macdown
 
 # Misc casks
-brew install --cask --appdir=/Applications google-chrome
-brew install --cask --appdir=/Applications firefox
-brew install --cask --appdir=/Applications skype
-brew install --cask --appdir=/Applications slack
-brew install --cask --appdir=/Applications dropbox
-brew install --cask --appdir=/Applications evernote
-brew install --cask --appdir=/Applications 1password
-brew install --cask --appdir=/Applications gimp
-brew install --cask --appdir=/Applications inkscape
+brew install --cask --appdir="/Applications" google-chrome
+brew install --cask --appdir="/Applications" firefox
+brew install --cask --appdir="/Applications" skype
+brew install --cask --appdir="/Applications" slack
+brew install --cask --appdir="/Applications" dropbox
+brew install --cask --appdir="/Applications" evernote
+brew install --cask --appdir="/Applications" 1password
+brew install --cask --appdir="/Applications" gimp
+brew install --cask --appdir="/Applications" inkscape
 
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
