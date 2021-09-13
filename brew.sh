@@ -37,7 +37,7 @@ yes Y | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/ma
 omz update
 
 # Install `wget` with IRI support.
-brew install wget --enable-iri
+brew install wget
 
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
@@ -56,13 +56,13 @@ LINE='eval "$(rbenv init -)"'
 grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
-brew install php@7.3 --with-gmp
+brew install vim
+
+brew install php@7.3
 brew install composer
-echo export PATH=$PATH:/Users/itshak/.composer/vendor/bin >> .bashrc 
+# echo export PATH=$PATH:/Users/itshak/.composer/vendor/bin >> .bashrc
+echo 'export PATH="/Users/$USER/.composer/vendor/bin:$PATH"' >> .zshrc
+source ~/.zshrc 
 composer global require laravel/valet
 valet install
 valet use php@7.3
@@ -97,7 +97,7 @@ brew install tcpflow
 brew install tcpreplay
 brew install tcptrace
 brew install ucspi-tcp # `tcpserver` etc.
-brew install homebrew/x11/xpdf
+# brew install homebrew/x11/xpdf
 brew install xz
 
 # Install other useful binaries.
@@ -109,7 +109,7 @@ brew install git-lfs
 brew install git-flow
 brew install git-extras
 brew install hub
-brew install imagemagick --with-webp
+brew install imagemagick
 brew install lua
 brew install lynx
 brew install p7zip
@@ -137,8 +137,9 @@ heroku update
 
 # Core casks
 brew install --cask --appdir="/Applications" alfred
-brew install --cask --appdir="/Applications" iterm2
-brew install --cask --appdir="/Applications" java
+# brew install --cask --appdir="/Applications" iterm2
+brew install --cask --appdir="/Applications" temurin
+# brew install --cask --appdir="/Applications" java
 brew install --cask --appdir="/Applications" xquartz
 
 # Development tool casks
@@ -147,20 +148,23 @@ brew install --cask --appdir="/Applications" atom
 brew install --cask --appdir="/Applications" virtualbox
 brew install --cask --appdir="/Applications" vagrant
 brew install --cask --appdir="/Applications" macdown
+brew install --cask --appdir="/Applications" phpstorm
+brew install --cask --appdir="/Applications" visual-studio-code
+
 
 # Misc casks
 brew install --cask --appdir="/Applications" google-chrome
 brew install --cask --appdir="/Applications" firefox
 brew install --cask --appdir="/Applications" skype
 brew install --cask --appdir="/Applications" slack
-brew install --cask --appdir="/Applications" dropbox
-brew install --cask --appdir="/Applications" evernote
+# brew install --cask --appdir="/Applications" dropbox
+# brew install --cask --appdir="/Applications" evernote
 brew install --cask --appdir="/Applications" 1password
 brew install --cask --appdir="/Applications" gimp
 brew install --cask --appdir="/Applications" inkscape
 
-#Remove comment to install LaTeX distribution MacTeX
-#brew cask install --appdir="/Applications" mactex
+# Remove comment to install LaTeX distribution MacTeX
+# brew cask install --appdir="/Applications" mactex
 
 # Install Docker, which requires virtualbox
 brew install docker
