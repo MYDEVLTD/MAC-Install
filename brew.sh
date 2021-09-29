@@ -61,12 +61,15 @@ brew install vim
 brew install php@7.3
 brew install composer
 # echo export PATH=$PATH:/Users/itshak/.composer/vendor/bin >> .bashrc
-echo 'export PATH="/Users/$USER/.composer/vendor/bin:$PATH"' >> .zshrc
+echo export PATH=/Users/$USER/.composer/vendor/bin:$PATH >> ~/.zshrc
 source ~/.zshrc 
 composer global require laravel/valet
 valet install
 valet use php@7.3
 pecl install xdebug
+pecl install mongodb
+brew tap kabel/php-ext
+brew install php@7.3-imap
 
 # Install font tools.
 brew tap bramstein/webfonttools
