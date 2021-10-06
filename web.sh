@@ -30,6 +30,7 @@ npm install -g jshint
 npm install -g less
 npm install -g cross-env
 npm install -g webpack
+npm install -g laravel-mix
 
 
 
